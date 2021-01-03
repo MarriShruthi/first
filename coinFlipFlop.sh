@@ -1,9 +1,9 @@
 #!/bin/bash
-echo coin=$((RANDOM%2))
-if [[ ${coin} -eq 0 ]] 
+
+coin=$(( RANDOM%2 ))
+if [[ $coin -eq 0 ]]
 then
-    echo HEADS
-elif [[ ${coin} -eq 1 ]]
-then
-    echo TAILS
+	echo "HEADS"
+else
+	echo "TAILS"
 fi

@@ -7,12 +7,12 @@ if [ $((year % 4)) -eq 0 ]
 then
 	if [ $((year % 100)) -eq 0 ]
 	then
-	if [ $((year % 480)) -eq 0 ]
-	then
-		echo "its a leap year'
-	else
-		echo "it's not a leap year"
-	fi
+		if [ $((year % 480)) -eq 0 ]
+		then
+			echo "its a leap year"
+		else
+			echo "it's not a leap year"
+		fi
 	else
 		echo "its  a leap year"
 	fi

@@ -1,40 +1,40 @@
 #!/bin/bash 
 	
-echo Num=$(( RANDOM%10 ))
+ Num=$((RANDOM%10))
 
-if [[ ${Num} -eq 1 ]]; 
+if [[ $Num -eq 1 ]] 
 then
-    echo "One"
+	echo "One"
 
-elif [[ ${Num} -eq 2 ]]
+elif [[ $Num -eq 2 ]]
 then
-    echo "Two"
+	echo "Two"
 
-elif [[ ${Num} -eq 3 ]]
+elif [[ $Num -eq 3 ]]
 then
 	echo "Three"
 
-elif [[ ${Num} -eq 4 ]]
+elif [[ $Num -eq 4 ]]
 then
-    echo "Four"
+	echo "Four"
 
-elif [[ ${Num} -eq 5 ]]
+elif [[ $Num -eq 5 ]]
 then
 	echo "Five"
 
-elif [[ ${Num} -eq 6 ]]
+elif [[ $Num -eq 6 ]]
 then
-    echo "Six"
+	echo "Six"
 
-elif [[ ${Num} -eq 7 ]]
+elif [[ $Num -eq 7 ]]
 then
 	echo "Seven"
 
-elif [[ ${Num} -eq 8 ]]
+elif [[ $Num -eq 8 ]]
 then
-    echo "Eight"
+	echo "Eight"
 
-elif [[ ${Num} -eq 9 ]]
+elif [[ $Num -eq 9 ]]
 then
 	echo "Nine"
 fi
