@@ -1,11 +1,29 @@
 #!/bin/bash
 
-echo "Please enter a number" 
+echo "Enter a number : "
 read num
-ret=$(factor $num | grep $num | cut -d ":" -f 2 | cut -d " " -f 2)
-if [ "$ret" -eq "$num" ] 
-then 
-echo "$num is a prime number" 
-else
-echo "$ num is not a prime number"
-fi
+echo "facors="
+for ((i = 1; i <= $num; i++))
+do
+        f=$(($num%$i))
+	if(( $f==0 ))
+         then
+ 		fac=$i   
+	fi   
+	j=2
+	flag=0
+	while [ $j -le $fac/2 ]
+	do
+	if [ `expr $fac % $j` -eq 0 ]
+	then
+       		 flag=1
+	fi
+	j=`expr $j + 1`
+	done
+	if [ $flag -eq 0 ]
+	then
+       		 echo "$fac"
+	fi
+done   
+
+

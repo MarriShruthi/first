@@ -1,8 +1,25 @@
 #!/bin/bash
 
-n=5
-for ((i=1; i<=$n; i++))
+echo Enter a number
+read n
+i=1
+sum=0
+while [ $i -le $n ]
 do
-	 H$i=1/$i
+sum=`expr $sum + \( 10000 / $i \)`
+i=`expr $i + 1`
 done
-	printf H = $H1+$H2+$H3+$H4+$H5
+echo Sum of $n series is
+i=1
+while [ $i -le 5 ]
+do
+a=`echo $sum | cut -c $i`
+echo -e "$a\c"
+if [ $i -eq 1 ]
+then
+echo -e ".\c"
+fi
+i=`expr $i + 1`
+done
+echo
+

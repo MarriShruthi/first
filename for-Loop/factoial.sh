@@ -11,5 +11,5 @@ do
   num=$((num - 1))
 done
 
-echo $fact
+echo "factorial of $num is : $fact"
 
